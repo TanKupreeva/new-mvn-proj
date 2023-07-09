@@ -1,6 +1,6 @@
 package abs;
 
-public class DVDPlayer extends Player implements Playable, Test{
+public class DVDPlayer extends Player {
     @Override
     public void play() {
         System.out.println("Start playing DVD disk...");
