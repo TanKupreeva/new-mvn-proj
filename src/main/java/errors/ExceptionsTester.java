@@ -58,7 +58,7 @@ public class ExceptionsTester {
             }
 
 
-            System.out.println("End.");
 
-        }
+
+        } System.out.println("End.");
     }}
