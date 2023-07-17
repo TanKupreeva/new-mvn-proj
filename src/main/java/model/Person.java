@@ -17,6 +17,7 @@ public class Person implements Cloneable{
     private String lastName;
     private int age;
     private Cat cat;
+    private Car car;
 //    @Override
 //    public boolean equals(Object o) {
 //        if (this == o) return true;

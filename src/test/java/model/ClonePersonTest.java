@@ -15,7 +15,7 @@ public class ClonePersonTest {
         p4.setAge(p3.getAge());
         p4.setCat(p3.getCat());
         System.out.println(("Clone correct ? "+p3.equals(p4)));
-        Person p5 = new Person(p3.getId(),p3.getName(),p3.getLastName(),p3.getAge(),p3.getCat() );
+        Person p5 = new Person(p3.getId(),p3.getName(),p3.getLastName(),p3.getAge(),p3.getCat(), p3.getCar() );
 
         Person p6 = new Person(555, "Mike", "Tyson", 57);
         Person p7 = p6.clone();
