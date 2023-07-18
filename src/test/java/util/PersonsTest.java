@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class PersonsTest {
     @Test
-    public void driveTest(){
+    public void driveTest() {
         Person p1 = new Person();
         p1.setName("John");
         Car car1 = new Car();
@@ -25,10 +25,8 @@ public class PersonsTest {
         Person p1 = new Person();
         p1.setName("John");
         Car car1 = new Car();
-
         p1.setCar(car1);
-
-            PersonsUtil.drive(p1);
+        PersonsUtil.drive(p1);
 
     }
 }

@@ -54,11 +54,11 @@ public class ExceptionsTester {
             try {
                 System.out.println(word.charAt(word.indexOf('o')));
             } catch (StringIndexOutOfBoundsException e) {
-                System.out.println("No such symbol 'o' in word "+word);
+                System.out.println("No such symbol 'o' in word " + word);
             }
 
 
-
-
-        } System.out.println("End.");
-    }}
+        }
+        System.out.println("End.");
+    }
+}
