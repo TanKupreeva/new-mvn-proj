@@ -31,10 +31,9 @@ public class Task2 {
             while (o != 'n' && o != 'y');
 
             if (o == 'n') {
+                System.out.println("Goodbye");
                 break;
             }
-
-
         }
     }
 }
