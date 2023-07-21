@@ -6,6 +6,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 class WrongLoginException extends Exception {
+    public WrongLoginException(String message) {
+        super(message);
+    }
 
     public WrongLoginException() {
         super("Неверный логин. Длина логина должна быть меньше 20 символов. " +
@@ -14,6 +17,9 @@ class WrongLoginException extends Exception {
 }
 
 class WrongPasswordException extends Exception {
+    public WrongPasswordException(String message) {
+        super(message);
+    }
 
     public WrongPasswordException() {
         super("Неверный пароль. Длина пароль должна быть меньше 20 символов. " +
