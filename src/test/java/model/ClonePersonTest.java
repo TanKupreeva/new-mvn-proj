@@ -20,5 +20,6 @@ public class ClonePersonTest {
         Person p6 = new Person(555, "Mike", "Tyson", 57);
         Person p7 = p6.clone();
         System.out.println(p6.equals(p7));
+
     }
 }
