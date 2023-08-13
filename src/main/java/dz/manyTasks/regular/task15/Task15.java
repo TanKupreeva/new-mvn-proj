@@ -19,6 +19,6 @@ public class Task15 {
     }
 
     public static String validate(String str) {
-        return str.replaceAll("(?i)[aeoiu]", "");
+        return str.replaceAll("(?i)[aeoiuy]", "");
     }
 }

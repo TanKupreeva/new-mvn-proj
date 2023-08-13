@@ -16,6 +16,6 @@ public class Task14 {
         System.out.println("The number of vowels: "+validate(text));
     }
     public static int validate(String str){
-        return str.replaceAll("[^aeiouAEIUO]","").length();
+        return str.replaceAll("[^aeiouyYAEIUO]","").length();
     }
 }
