@@ -5,6 +5,7 @@ public interface DoStuff2 {
 }
 interface DoMore{
     float getAvg(int a, int b, int c);}
+
 abstract class DoAbstract implements DoStuff2, DoMore{}
 class DoStuff implements DoStuff2{
     @Override
@@ -13,6 +14,18 @@ class DoStuff implements DoStuff2{
     }
 }
 interface DoAll extends DoMore{
+
+    float getAvg(int a, int b, int c,int d);
+}
+class TT implements DoAll {
+
     @Override
-    float getAvg(int a, int b, int c);
+    public float getAvg(int a, int b, int c) {
+        return 0;
+    }
+
+    @Override
+    public float getAvg(int a, int b, int c, int d) {
+        return 0;
+    }
 }
