@@ -11,14 +11,36 @@ public class Plant {
         this.name = name;
     }
 
-}
-class Tree extends Plant{
+    public Plant() {
+        this("fern");
+    }
 
+
+}
+
+class Tree extends Plant {
+
+    public Tree() {
+
+    }
 
     public Tree(String name) {
         super(name);
     }
 
-    public void growFruit(){}
-    public void dropLeaves(){}
+    public void growFruit() {
+    }
+
+    public void dropLeaves() {
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        Plant p = new Plant();
+        System.out.println(p.getName());
+        Tree t = new Tree();
+        System.out.println(t.getName());
+
+    }
 }

@@ -21,15 +21,26 @@ public enum Seasons {
     }
 
     public static Seasons getS(int number) {
-        if (number == 12 || number == 1 || number == 2)
-            return WINTER;
-        if (number == 3 || number == 4 || number == 5)
-            return SPRING;
-        if (number == 6 || number == 7 || number == 8)
-            return SUMMER;
-        if (number == 9 || number == 10 || number == 11)
-            return AUTUMN;
-        else throw new IllegalArgumentException("Incorrect month number " + number);
+        switch (number) {
+            case 12:
+            case 1:
+            case 2:
+                return WINTER;
+            case 3:
+            case 4:
+            case 5:
+                return SPRING;
+            case 6:
+            case 7:
+            case 8:
+                return SUMMER;
+            case 9:
+            case 10:
+            case 11:
+                return AUTUMN;
+        }
+
+       throw new IllegalArgumentException("Incorrect month number " + number);
     }
 }
 
@@ -51,7 +62,7 @@ class SeasonsTester {
         Scanner sc = new Scanner(System.in);
         int monthNumber = sc.nextInt();
         //String seasonName = sc.next();
-      //  Seasons s2 = Seasons.valueOf(seasonName);
+        //  Seasons s2 = Seasons.valueOf(seasonName);
         switch (Seasons.getS(monthNumber)) {
             case WINTER:
                 System.out.println("Finally snow!");
@@ -62,6 +73,7 @@ class SeasonsTester {
             default:
                 System.out.println("=)");
         }
+        System.out.println(Seasons.valueOf("AUTUMN").ordinal());
 
     }
 }
