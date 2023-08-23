@@ -63,4 +63,11 @@ IOUtils.write("A", filePath1);
         Assert.assertEquals("Wrong content", "ABCDE", IOUtils.readFile(dstPath));
 
     }
+    @Test
+    public void readFileByLinesTest(){
+String filePath = "D:/io_tests/war_and_peace.ru.txt";
+String data = IOUtils.readFileByLines(filePath);
+        System.out.println(data);
+        Assert.assertNotNull(data);
+    }
 }
