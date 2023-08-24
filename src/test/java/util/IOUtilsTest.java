@@ -42,10 +42,11 @@ public class IOUtilsTest {
         String filePath1 = "D:/io_tests/first.txt";
         String filePath2 = "D:/io_tests/second.txt";
         String filePath3 = "D:/io_tests/third.txt";
-        IOUtils.copyFiles(filePath3,filePath1, filePath2);
+        IOUtils.copyFiles(filePath3, filePath1, filePath2);
         Assert.assertEquals("Wrong content", "AB", IOUtils.readFile(filePath3));
 
     }
+
     @Test
     public void copyMultFileTest() {
         String filePath1 = "D:/io_tests/A.txt";
@@ -53,13 +54,13 @@ public class IOUtilsTest {
         String filePath3 = "D:/io_tests/C.txt";
         String filePath4 = "D:/io_tests/D.txt";
         String filePath5 = "D:/io_tests/E.txt";
-IOUtils.write("A", filePath1);
+        IOUtils.write("A", filePath1);
         IOUtils.write("B", filePath2);
         IOUtils.write("C", filePath3);
         IOUtils.write("D", filePath4);
         IOUtils.write("E", filePath5);
-       String dstPath = "D:/io_tests/ABCDE.txt";
-        IOUtils.copyFiles(dstPath,filePath1,filePath2, filePath3, filePath4, filePath5);
+        String dstPath = "D:/io_tests/ABCDE.txt";
+        IOUtils.copyFiles(dstPath, filePath1, filePath2, filePath3, filePath4, filePath5);
         Assert.assertEquals("Wrong content", "ABCDE", IOUtils.readFile(dstPath));
 
     }
