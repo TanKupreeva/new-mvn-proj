@@ -196,3 +196,29 @@ class Tasks {
         System.out.println(search + " : " + counter);
     }
 }
+//    static void t2(String filePath, String resultFilePath, String search){
+//        // <search word> : <counter>
+//        String resultFormat = "\"%s\" : %d";
+//        // example : "Java" : 14  (ignoring register) , "JAVA"
+//        //1 step: read content
+//        String data = IOUtils.readFile(filePath).toLowerCase();
+//        search = search.toLowerCase();
+//
+//        int counter = 0;
+//        //2 walk and count words in <search word> : <counter> format
+//        if(data.contains(search)){
+//
+//            int index;
+//            while ((index = data.indexOf(search)) != -1){
+//                counter++;
+//                data = data.substring(index + search.length());
+//            }
+//
+//        }
+//
+//        //3 save the results
+//        IOUtils.write(String.format(resultFormat, search, counter), resultFilePath);
+//
+//
+//
+//    }
