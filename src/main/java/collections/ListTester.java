@@ -1,6 +1,5 @@
 package collections;
 
-import dz.question.q7.C;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -109,20 +108,41 @@ public class ListTester {
         System.out.println(group1);
         Student prev = group1.set(1, new Student(100, "Mike", 7.8));
         System.out.println(group1);
-        group1.sort(new StudentComporator(false));
+        group1.sort(new StudentComporator(true));
         group1.forEach(e -> {
             System.out.println(e);
         });
 
-        Cat c1 = new Cat(1,"murzik","black", 5);
-        Cat c2 = new Cat(1,"pushok","white", 2);
-        Cat c3 = new Cat(1,"rijik","brown", 5);
-        Cat c4 = new Cat(1,"murzik4","black", 4);
-        Cat c5 = new Cat(1,"murzik5","white", 2);
 
+        Cat c1 = new Cat(1, "Murzik", "black", 5);
+        Cat c2 = new Cat(2, "Pushok", "white", 2);
+        Cat c3 = new Cat(3, "Rijik", "brown", 5);
+        Cat c4 = new Cat(4, "Vaska", "black", 4);
+        Cat c5 = new Cat(5, "Kitty", "white", 2);
 
+        List<Cat> catList = new ArrayList<>();
+        catList.add(c1);
+        catList.add(c2);
+        catList.add(c3);
+        catList.add(c4);
+        catList.add(c5);
 
+        Iterator<Cat> iterator1 = catList.iterator();
+        while (iterator1.hasNext()) {
+            Cat c = iterator1.next();
+            if (c.getColor().contains("black")) {
+                iterator1.remove();
+                System.out.println("Cat deleted " + c.getName());
+            }
+        }
+        System.out.println("Left: " + catList);
+        catList.sort(new CatComparator(true));
+        catList.forEach(e -> {
+            System.out.println(e);
+        });
     }
+
+
 }
 
 
@@ -135,15 +155,45 @@ class StudentComporator implements Comparator<Student> {
 
     @Override
     public int compare(Student o1, Student o2) {
-        System.out.println(" compare -> ");
+        System.out.println("compare -> ");
         if (o1.getAvg() == o2.getAvg())
             return 0;
         else if (o1.getAvg() > o2.getAvg())
-            return 1;
-        else
-            return -1;
+            return asc ? 1 : -1;
+        else return asc ? -1 : 1;
+
+    }
+
+//    @Override
+//    public int compare(Student o1, Student o2) {
+//        System.out.println(" compare -> ");
+//        if (o1.getAvg() == o2.getAvg())
+//            return 0;
+//        else if (o1.getAvg() > o2.getAvg())
+//            return 1;
+//        else
+//            return -1;
+//    }
+
+}
+
+class CatComparator implements Comparator<Cat> {
+    private boolean asc;
+
+    public CatComparator(boolean asc) {
+        this.asc = asc;
+    }
+
+    @Override
+    public int compare(Cat o1, Cat o2) {
+        if (o1.getAge() == o2.getAge())
+            return 0;
+        else if (o1.getAge() > o2.getAge())
+            return asc ? 1 : -1;
+        else return asc ? -1 : 1;
     }
 }
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -152,7 +202,6 @@ class Cat {
     private String name;
     private String color;
     private int age;
-
 
 }
 
