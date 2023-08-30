@@ -1,9 +1,6 @@
 package model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Objects;
 
@@ -11,7 +8,8 @@ import java.util.Objects;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Person implements Cloneable{
+@ToString
+public class Person implements Cloneable, Comparable<Person>{
     private int id;
     private String name;
     private String lastName;
@@ -61,5 +59,9 @@ public class Person implements Cloneable{
     }
 
 
-
+    @Override
+    public int compareTo(Person o) {
+        return this.lastName.compareTo(o.getLastName());
+    }
 }
+
