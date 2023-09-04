@@ -2,8 +2,6 @@ package dz.streams_tasks;
 
 
 import java.io.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 public class ByteStream {
@@ -126,7 +124,7 @@ public class ByteStream {
     }
 
 
-//8. Прочитайте текст из файла, удалите все лишние пробелы, знаки табуляции. Пересохраните текст задом наперед.
+    //8. Прочитайте текст из файла, удалите все лишние пробелы, знаки табуляции. Пересохраните текст задом наперед.
     public static void delete(String path) {
         String str = read(path).replaceAll(" ", "");
         str = str.replaceAll("\t", "");

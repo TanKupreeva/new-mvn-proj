@@ -110,14 +110,15 @@ public class CharacterStream {
         String result = "\"" + search + "\" : " + counter;
         return result;
     }
-//8. Прочитайте текст из файла, удалите все лишние пробелы, знаки табуляции. Пересохраните текст задом наперед.
-    public static void reverse(String path, String resultPath){
+
+    //8. Прочитайте текст из файла, удалите все лишние пробелы, знаки табуляции. Пересохраните текст задом наперед.
+    public static void reverse(String path, String resultPath) {
         String str = read(path);
-        str = str.replaceAll(" ","");
-        str = str.replaceAll("\t","");
-        StringBuilder sb= new StringBuilder(str);
+        str = str.replaceAll(" ", "");
+        str = str.replaceAll("\t", "");
+        StringBuilder sb = new StringBuilder(str);
         sb = sb.reverse();
-        write(sb.toString(),resultPath);
+        write(sb.toString(), resultPath);
 
     }
 
@@ -129,12 +130,11 @@ public class CharacterStream {
         printgenRandom("/Users/tatyanakupreeva/Documents/io_tests/random_file_char.txt", 2, 10, 20);
         sortNumber("/Users/tatyanakupreeva/Documents/io_tests/sort_char.txt");
         System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/колобокRu.txt", "колобок"));
-        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt","я"));
-        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt","ты"));
-        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt","а"));
-        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt","и"));
-        reverse("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt","/Users/tatyanakupreeva/Documents/io_tests/ПушкинReverse.txt");
-
+        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt", "я"));
+        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt", "ты"));
+        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt", "а"));
+        System.out.println(findText("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt", "и"));
+        reverse("/Users/tatyanakupreeva/Documents/io_tests/Пушкин.txt", "/Users/tatyanakupreeva/Documents/io_tests/ПушкинReverse.txt");
 
 
     }
