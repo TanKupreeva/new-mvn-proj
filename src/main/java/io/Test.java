@@ -44,6 +44,9 @@ public class Test {
             }
             Date endDate0 = new Date();
             System.out.println("-------------------------");
+
+
+
             Reader reader = new FileReader("D:\\io_tests\\simple_file.txt");
             int characterCode;
             while ((characterCode = reader.read()) != -1) {

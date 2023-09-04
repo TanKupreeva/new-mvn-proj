@@ -125,6 +125,8 @@ public class ByteStream {
         writeText(resultPath, String.format(resultFormat, search, counter));
     }
 
+
+//8. Прочитайте текст из файла, удалите все лишние пробелы, знаки табуляции. Пересохраните текст задом наперед.
     public static void delete(String path) {
         String str = read(path).replaceAll(" ", "");
         str = str.replaceAll("\t", "");
