@@ -58,8 +58,8 @@ public class SortingTest {
         System.out.println(persons);
 
         Pizza pi1 = new Pizza('s', "Cheese", true, 2100);
-        Pizza pi2 = new Pizza('m', "Vegan", false, 900);
-        Pizza pi3 = new Pizza('m', "Vegan", true, 900);
+        Pizza pi2 = new Pizza('m', "Vegan", false, 750);
+        Pizza pi3 = new Pizza('m', "Vegan", true, 800);
         Pizza pi4 = new Pizza('m', "Peperoni", true, 900);
         Pizza pi5 = new Pizza('l', "Peperoni", true, 1200);
 
@@ -67,6 +67,8 @@ public class SortingTest {
         Collections.sort(pizzas);
         System.out.println(pizzas);
         Collections.sort(pizzas, PizzaByNameComparator.BY_NAME);
+
+
     }
 }
 
