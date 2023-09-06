@@ -1,9 +1,7 @@
 package dz.collection.task2;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class University {
     //список студентов по номеру курса
@@ -18,8 +16,8 @@ public class University {
     }
 
     //список студентов по имени лектора
-    public static List<String> getStudents(List<Student> students, Lecturer lecturer) {
-        List<String> studentOfLecturer = new ArrayList<>();
+    public static Set<String> getStudents(List<Student> students, Lecturer lecturer) {
+        Set<String> studentOfLecturer = new LinkedHashSet<>();
         List<String> listsubjects;
         List<String> lecturerTaughtCourses = lecturer.getTaughtCourses();
         for (String anylecurerTaughtCourses : lecturerTaughtCourses) {
