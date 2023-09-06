@@ -15,7 +15,6 @@ public class Student implements Person {
     private int courseNum;
 
 
-
     @Override
     public String getName() {
         return "student " + name;

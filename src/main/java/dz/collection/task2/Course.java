@@ -20,7 +20,7 @@ public class Course {
     }
 
     public void assignTeachers(Lecturer teacher) {
-//teacher.setName();
+
     }
 
     public void getNumberOfStudents() {
