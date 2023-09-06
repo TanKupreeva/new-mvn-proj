@@ -20,7 +20,7 @@ public class Course {
     }
 
     public void assignTeachers(Lecturer teacher) {
-//????????????????/////////
+        this.teacher = teacher;
     }
 
     public void getNumberOfStudents() {
