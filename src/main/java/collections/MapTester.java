@@ -8,8 +8,12 @@ public class MapTester {
     public static void main(String[] args) {
         Map<Integer, String> map1 = new HashMap<>();
         map1.put(123, "John");
-        map1.put(123, "Mike");
+        map1.put(125, "Mike");
         System.out.println(map1.size());
+
+        map1.forEach((k, v) -> {
+            System.out.println("key: " + k + ", value: " + v);
+        });
 
         Map<Passport, Human> map2 = new HashMap<>();
         map2.put(new Passport("MP124312", new Date()), new Human("Bob", "JJ", 50));
@@ -43,7 +47,7 @@ public class MapTester {
             Map<Passport, Human> scope = entry.getValue();
             System.out.println("Notify:");
             for (Map.Entry<Passport, Human> entryInternal : scope.entrySet()) {
-                System.out.println(entryInternal.getValue().name + "please take your passport with id " + entryInternal.getKey().id);
+                System.out.println(entryInternal.getValue().name + " please take your passport with id " + entryInternal.getKey().id);
             }
         }
     }
