@@ -26,6 +26,6 @@ public class Dictionary {
             map.put(s, counter);
         }
         map.forEach((k,v)-> System.out.println( k + " : " + v));
-        
+
     }
 }
