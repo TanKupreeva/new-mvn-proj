@@ -14,18 +14,20 @@ public class ThreadUtils {
 
     public static void log(Object text) {
         Thread th = Thread.currentThread();
-        System.out.println(String.format("%s[%s]: [%d] %s (%d)", text.toString(), new Date().toString(), th.getId(), th.getName(), th.getPriority()));
+        ;
+        System.out.println(String.format("%s[%s]<%s>: [%d] %s (%d)", text.toString(), new Date().toString(),
+                th.getState(), th.getId(), th.getName(), th.getPriority()));
     }
 
     public static void sleep(double second) {
-        log("start sleeping");
+//        log("start sleeping");
 
         try {
             Thread.sleep((int) (second * 1000));
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log("finish sleeping");
+//        log("finish sleeping");
 
     }
 
@@ -34,7 +36,7 @@ public class ThreadUtils {
         sleep((int) (Math.random() * 3));
     }
 
-    public static void runInNewThread(Runnable target){
+    public static void runInNewThread(Runnable target) {
         new Thread(target).start();
     }
 }
