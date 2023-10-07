@@ -1,6 +1,8 @@
 package dz.thread.task3;
 
 
+import lombok.var;
+
 public class ThreadMain {
 
     public static void main(String[] args) {
@@ -18,5 +20,12 @@ public class ThreadMain {
         Thread thC = new Thread(new ThreadC());
         thC.setName("Thread C");
         thC.start();
+
+        Resource r = new Resource();
+        r.add(thA.getName());
+        r.add(thB.getName());
+        r.add(thC.getName());
+
+        System.out.println(r.list);
     }
 }

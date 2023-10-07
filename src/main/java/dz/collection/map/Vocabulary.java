@@ -53,8 +53,10 @@ public class Vocabulary {
         List<String> ru = new ArrayList<>(Arrays.asList("Каждый должен сперва уметь слушать а лишь потом говорить",
                 "Дела звучат громче слов", "Собаки, что пускаются за многими зайцами, ни одного не убьют",
                 "Ранняя пташка ловит червяка", "Игра не стоит свеч"));
-        
+
         Map<String, List<String>> treemap = new TreeMap<>(mapEnRu);
+        Set<String> newWords = new TreeSet<>();
+
         treemap.forEach((k, v) -> System.out.println(k + " : " + v));
         for (String str : en) {
             String[] words = str.split(" ");
@@ -63,15 +65,15 @@ public class Vocabulary {
                     System.out.print(mapEnRu.get(words[i].toLowerCase()) + " ");
                 else {
                     System.out.print(words[i] + " ");
-
+                    newWords.add(words[i]);
                 }
             }
             System.out.println();
         }
-
-
-
-
+        System.out.println("New words in the vocabulary:");
+        newWords.forEach(s -> System.out.print(s + " "));
+        newWords.forEach(s -> treemap.put(s, null));
     }
+
 }
 
