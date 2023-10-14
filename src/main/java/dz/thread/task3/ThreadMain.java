@@ -1,7 +1,7 @@
 package dz.thread.task3;
 
 
-import lombok.var;
+
 
 public class ThreadMain {
 

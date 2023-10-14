@@ -2,7 +2,6 @@ package dz.thread.task2;
 
 
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import static util.ThreadUtils.*;
 
