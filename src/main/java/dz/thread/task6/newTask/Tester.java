@@ -1,4 +1,4 @@
-package dz.thread.newTask;
+package dz.thread.task6.newTask;
 
 import java.util.Scanner;
 
