@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class List1 {
-    private List<Integer> l = new ArrayList<>();
+    private List<Integer> list = new ArrayList<>();
 
     public synchronized void put() {
-        while (l.size() > 0) {
+        while (list.size() > 0) {
             try {
                 wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
             int x = (int) Math.random() * 10;
-            l.add(x);
+            list.add(x);
             ThreadUtils.log("Thread1 put number");
             ThreadUtils.log("Number is " + x);
             ThreadUtils.log("Notify ->");
@@ -26,14 +26,14 @@ public class List1 {
 
 
     public synchronized void get() {
-        while (l.size() == 0) {
+        while (list.size() == 0) {
             try {
                 wait();
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
 
-            int y = l.get(l.size() - 1);
+            int y = list.get(list.size() - 1);
 
             ThreadUtils.log("Thread2 get number");
             ThreadUtils.log("Number is " + y);
