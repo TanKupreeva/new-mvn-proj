@@ -9,6 +9,9 @@ public class Task1 {
         String name = sc.nextLine();
         System.out.println("Hello");
         System.out.println(name);
-
+boolean b = (!(true)&&!(false));
+        System.out.println(b);
+        String t = null;
+        System.out.println(t.length());
     }
 }
